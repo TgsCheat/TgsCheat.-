@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TgsCheat - Hile Merkezi</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- Küçük #Kei yazısı RGB döngüsü ile sol üstte -->
+  <div class="rgb-text">#Kei</div>
+
+  <div class="animated-bg"></div>
+
+  <header>
+    <img src="https://resmim.net/cdn/2025/04/13/N7RP4q.jpg" alt="TgsCheat Logo" class="logo" />
+    <h1>TgsCheat</h1>
+    <p>Oyunun Kuralını Biz Yazarız!</p>
+  </header>
+
+  <main>
+    <!-- Ürün 1 -->
+    <div class="product-card">
+      <h2>TgsCheat1</h2>
+      <p>Mod Menü</p>
+      <a href="https://drive.google.com/uc?export=download&id=1TNlo68bGv2m2li8LZ3ufsHsrpBdMNz2H" class="download-btn" download>İndir</a>
+      <div class="more-options" onclick="showImage(this, 'https://resmim.net/cdn/2025/04/13/N7sot3.jpg')">...</div>
+      <div class="details-image"></div>
+    </div>
+
+    <!-- Ürün 2 -->
+    <div class="product-card">
+      <h2>TgsCheat2</h2>
+      <p>Mod Menü</p>
+      <a href="https://drive.google.com/uc?export=download&id=1TQ2LJigDe7fYf-jiUSj_NRtupvXzauta" class="download-btn" download>İndir</a>
+      <div class="more-options" onclick="showImage(this, 'https://resmim.net/cdn/2025/04/13/N7srpq.jpg')">...</div>
+      <div class="details-image"></div>
+    </div>
+
+    <!-- Ürün 3 -->
+    <div class="product-card">
+      <h2>TgsCheat3</h2>
+      <p>Mod Menü</p>
+      <a href="https://drive.google.com/uc?export=download&id=1TRsouYMkbQ86uT4x2ICzX54Fi11uTon_" class="download-btn" download>İndir</a>
+      <div class="more-options" onclick="showImage(this, 'https://resmim.net/cdn/2025/04/13/N7s5Pc.jpg')">...</div>
+      <div class="details-image"></div>
+    </div>
+
+    <!-- Ürün 4 -->
+    <div class="product-card">
+      <h2>TgsCheat4</h2>
+      <p>Mod Menü</p>
+      <a href="https://drive.google.com/uc?export=download&id=1TYspjjn2ee5VpbB-q2O1tOtjfvmPWZRg" class="download-btn" download>İndir</a>
+      <div class="more-options" onclick="showImage(this, 'https://resmim.net/cdn/2025/04/13/N7ssDR.jpg')">...</div>
+      <div class="details-image"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 TgsCheat | Tüm hakları saklıdır.</p>
+    <a href="https://t.me/Tgs_Kurucu" target="_blank">
+      <img src="https://resmim.net/cdn/2025/04/13/N7sNmx.png" alt="Telegram" class="telegram-logo">
+    </a>
+  </footer>
+
+  <audio id="bgMusic" loop>
+    <source src="https://files.catbox.moe/pxjrsa.mp4" type="audio/mp4">
+  </audio>
+
+  <div class="music-toggle" onclick="toggleMusic()">
+    <img src="https://resmim.net/cdn/2025/04/13/N7iRHG.jpg" alt="Müzik" />
+  </div>
+
+  <script>
+    function showImage(el, imageUrl) {
+      const imageBox = el.nextElementSibling;
+      const isVisible = imageBox.style.display === 'block';
+      document.querySelectorAll('.details-image').forEach(img => img.style.display = 'none');
+
+      if (!isVisible) {
+        imageBox.innerHTML = `<img src="${imageUrl}" class="popup-image" />`;
+        imageBox.style.display = 'block';
+      } else {
+        imageBox.style.display = 'none';
+      }
+    }
+
+    const music = document.getElementById('bgMusic');
+    let isPlaying = false;
+
+    function toggleMusic() {
+      if (isPlaying) {
+        music.pause();
+        isPlaying = false;
+      } else {
+        music.play();
+        isPlaying = true;
+      }
+    }
+
+    music.addEventListener('ended', () => {
+      setTimeout(() => {
+        music.play();
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
